@@ -1,0 +1,35 @@
+Hello,
+I am a researcher at INRIA (France) and I am conducting an empirical study on web security. In a test environment, my team and I have developed a protocol that has allowed us to discover authorization vulnerabilities in real applications.
+We believe https://desygner.com/  has a BAC (Broken Access Control) vulnerability: by feeding the front end with controlled HTTP responses, we were able to access and download any premium content.
+We intend to support you in the process of recognizing and solving the issue.
+
+Following, details about the vulnerability:
+
+Setup
+Install Tweak (Chrome). Note that tampering with HTTP responses can be done at a lower level by leveraging instrumented browsers engines (e.g., Burp Suite, OWASP ZAP). For more details about JavaScript instrumentation see Jueckstock et al 2019.
+
+Prerequisites
+Having a regular account (no premium)
+
+Step to reproduce
+
+Access to premium content (see video `download_premium.mp4`)
+From the dashboard (`https://desygner.com/editor/[id]`), open the sidebar and select premium content. A popup prevents the user from accessing the content.
+Open the browser's Developer Tools > open the `network` tab, add the `templates_consume` filter, and reload the page.
+Once the sidebar opens, two HTTP messages are now available. Select the first: copy the request URL to Tweak and also copy the response body.
+Replace each occurrence of `"is_premium": true` with `"is_premium": false` in the response body.
+Reload the page.
+Premium content is now available and downloadable (temporary elevation of privileges).
+
+Possible solutions
+Ensure that critical features (such as download content) are fully handled server-side, independently of any frontend state
+Disable React Dev Tool access in production (best practice)
+
+We are available to provide further details or assistance. We kindly ask for an official acknowledgement of these vulnerabilities and an estimate of the fix time.
+
+Attached, you will find three demonstration videos highlighting the vulnerabilities. 
+We declare that we have not disclosed these vulnerabilities to any third party. 
+
+Thank you for your time and consideration. We hope to hear from you soon.
+
+Nicolò

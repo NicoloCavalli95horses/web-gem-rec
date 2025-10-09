@@ -1,0 +1,29 @@
+Hello,
+I am a researcher at INRIA (France) and I am conducting an empirical study on web security. In a test environment, my team and I have developed a protocol that has allowed us to discover authorization vulnerabilities in real applications. We believe that your web application have BAC (Broken Access Control) issues: by manipulating React components state, we were able to download premium content in the 'modules' category.
+
+We intend to support applications that may be affected by these vulnerabilities, so we would kindly ask you to share this email with your IT team.
+
+Following, details about the vulnerability:
+
+Requirements
+- Install React Dev Tool (https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- Have a regular account (no premium)
+
+Download premium resources
+- From the main page (`https://www.designcap.com/app/`), create a new project
+- From the new project's page, open the Browser Developer Tools > open the `Components` tab provided by the React Dev Tool extension.
+- Using the component picker, select the component that renders the desired premium resource in the 'modules' category
+- Edit the component props (e.g., `$r.props.policy = 0` or use the React Dev Tool interface).
+- Click on the premium content. The premium content is now accessible.
+- You can download the premium content
+
+Possible solutions
+- Ensure React Dev Tool is disabled in production (best practice)
+- Verify, on the server side, that the user is authorized to perform sensitive actions (e.g., download) with premium content
+
+We kindly ask you to acknowledge this vulnerability and provide us with an estimated timeframe for resolution.
+We are available for further assistance or clarification (a supporting video is available if required)
+
+Best regards
+
+Nicolo'

@@ -1,0 +1,7 @@
+- From the dashboard (`flexclip.com/editor`), create a new video (click `create a video +`). Select a default empty canvas.
+- Open the Browser Developer Tools -> open the `Components` tab provided by the React Dev Tool extension.
+- Using the component picker, select the component that renders the desired premium resource (e.g., premium fonts).
+- Edit the component props (e.g., `isCanDrag: true`, `isFreeUser: false`, `isPaymentResources: false`, etc.).
+- Drag the premium content onto the canvas.
+- The premium content is now accessible.
+- You can download the premium content.

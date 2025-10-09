@@ -1,0 +1,35 @@
+Hello,
+I am a researcher at INRIA (France) and I am conducting an empirical study on web security. This mainly involves studying how JavaScript frameworks are used to enforce access control policies and analyzing HTTP traffic from a security perspective.
+
+In a test environment, my team and I have developed a protocol that has allowed us to discover authorization vulnerabilities in real applications. We believe that your web application have BAC (Broken Access Control) issues.
+
+We intend to support applications that may be affected by these vulnerabilities, so we would kindly ask you to share this email with your IT team.
+
+Following, details about the vulnerability:
+
+Requirements
+- Install React Dev Tool (https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- Have a regular account (no premium)
+
+Download premium resources without watermark
+- From the main page, create a new project (example URL `https://picsart.com/create/editor?category=templates&customSize=1080x1080&unit=px`)
+- Open the left sidebar, clicking on `background`
+- Open the Browser Developer Tools -> open the `Components` tab provided by the React Dev Tool extension.
+- Using the component picker, select the component that renders the target premium resource 
+- Edit the component props from the browser console (e.g., `$r.props.texture.paid = false; $r.props.texture.is_paid = false; $r.props.texture.resource.is_paid = false; $r.props.texture.resource.paid = false`).
+- Click on the premium content
+- The premium content is now accessible without watermark
+- You can download the premium content without watermark
+
+We believe this attack could lead to massive access to a large portion of premium resources. Attached is an example video.
+
+Possible solutions
+- Ensure React Dev Tool is disabled in production (best practice)
+- Verify, on the server side, that the user is authorized to perform sensitive actions (e.g., download) with premium content. Don't trust front-end state when enforcing access control policies
+
+We kindly ask you to acknowledge this vulnerability and provide us with an estimated timeframe for resolution.
+We are available for further assistance or clarification.
+
+Best regards
+
+Nicolo'
