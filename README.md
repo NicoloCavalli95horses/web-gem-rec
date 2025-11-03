@@ -2,8 +2,7 @@
 
 ## Disclaimer 
 
-This repository supports the paper "Web GEMs: Broken Access Control Vulnerabilities (BAC) in Large Web
-Front-Ends. An Empirical Study".
+This repository supports the paper "Web GEMs: Revealing Broken Access Control (BAC) Vulnerabilities in Large Web Applications Through Front-End Tampering".
 
 The materials contained in this folder (ie, videos and images) are provided for educational and research purposes only. They are not intended to promote or facilitate any illegal activities. The authors and contributors of this repository do not assume any responsibility for the misuse of the content provided herein.
 
